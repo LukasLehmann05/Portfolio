@@ -11,6 +11,7 @@
 :root {
     --text-green: #02F4BF;
     --text-orange: #E15544;
+    --content-max-width: 1920px;
 }
 
 * {
@@ -31,9 +32,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1920px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     padding: 0px 100px;
+}
+
+.main-content {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.footer-content {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
 }
 
 .nav-bar {
@@ -63,6 +74,105 @@ body {
 .language-selector {
     display: flex;
 }
+
 .hero-section {
     min-height: 100vh;
+}
+
+h2 {
+    font-size: 54px;
+    line-height: 120%;
+    color: var(--text-orange);
+}
+
+.projects {
+    margin-top: 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.project-card p {
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+}
+
+.project-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+    margin-bottom: 17px;
+}
+
+.project-languages {
+    margin-bottom: 40px;
+}
+
+.project-links {
+    margin-top: 48px;
+}
+
+.project-links a {
+    padding: 15px 30px;
+}
+
+.github-button {
+    color: var(--text-orange);
+    border: solid 1px var(--text-green);
+}
+
+.live-test-button {
+    color: #0B042D;
+    background-color: var(--text-green);
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.colleague-feedback {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--text-orange);
+    margin-top: 36px;
+    margin-bottom: 32px;
+}
+
+.feedback-card {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.feedback-cards {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.feedback-card h4 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--text-orange);
+    margin-bottom: 8px;
+}
+
+.feedback-text {
+    margin-top: 32px;
 }
