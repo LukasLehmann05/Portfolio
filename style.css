@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Roboto Mono";
+    src: url(./fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Handjet";
+    src: url(./fonts/Handjet/Handjet-VariableFont_ELGR\,ELSH\,wght.ttf);
+}
+
+:root {
+    --text-green: #02F4BF;
+    --text-orange: #E15544;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto Mono", sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(to bottom, #13074E, #1D0A79F2);
+    color: var(--text-green);
+}
+
+.header-content {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0px 100px;
+}
+
+.nav-bar {
+    display: flex;
+    color: var(--text-orange);
+    gap: 48px;
+}
+
+.nav-bar a {
+    color: var(--text-orange);
+    font-size: 22px;
+    line-height: 120%;
+}
+
+.nav-bar p {
+    font-size: 48px;
+    font-family: "Handjet", sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+}
+
+.language-selector {
+    display: flex;
+}
+.hero-section {
+    min-height: 100vh;
+}
