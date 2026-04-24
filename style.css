@@ -159,6 +159,7 @@ h2 {
     font-size: 18px;
     font-weight: 400;
     line-height: 120%;
+    max-width: 300px;
 }
 
 .feedback-cards {
@@ -196,4 +197,89 @@ h2 {
 
 .skill-section {
     margin-top: 103px;
+}
+
+.contact-section {
+    margin-top: 104px;
+}
+
+.contact-section-title {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.contact-links {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-links a {
+    display: flex;
+    gap: 18px;
+    color: var(--text-green);
+}
+
+.contact-img {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-bottom: 24px;
+}
+
+.contact-info-text {
+    max-width: 40%;
+}
+
+.text-input-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form input {
+    border: solid 1px var(--text-green);
+    background-color: transparent;
+    color: var(--text-green);
+    font-size: 18px;
+    line-height: 140%;
+    padding: 15px 13px;
+}
+
+.contact-form input::placeholder {
+    color: var(--text-green);
+}
+
+.form-input-left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 45%;
+}
+
+.message-input {
+    width: 45%;
+    border: solid 1px var(--text-green);
+    background-color: transparent;
+    color: var(--text-green);
+    font-size: 18px;
+    line-height: 140%;
+    padding: 15px 13px;
+    resize: none;
+}
+
+.message-input::placeholder {
+    color: var(--text-green);
+}
+
+.submit-section {
+    margin-top: 32px;
 }
