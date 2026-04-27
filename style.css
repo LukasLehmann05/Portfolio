@@ -26,9 +26,13 @@ body {
     color: var(--text-green);
 }
 
-.header-content {
+header {
     position: sticky;
     top: 0;
+    padding: 24px 0px;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -363,4 +367,8 @@ h2 {
     color: var(--text-orange);
     font-size: 14px;
     line-height: 120%;
+}
+
+.nav-links a:hover {
+    color: var(--text-green);
 }
