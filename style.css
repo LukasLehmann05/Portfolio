@@ -282,4 +282,36 @@ h2 {
 
 .submit-section {
     margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .guidlines-checkbox {
+    width: 18px;
+    height: 18px;
+    border: solid 2px var(--text-orange);
+    appearance: none;
+    padding: 0px;
+    border-radius: 1px;
+    color: transparent;
+}
+
+.guidlines-checkbox:checked {
+    background-color: var(--text-green);
+}
+
+.submit-button {
+    color: #827B7B;
+    line-height: 120%;
+    background-color: transparent;
+    border: solid 1px #827B7B;
+    padding: 15px 30px;
+    font-weight: 500;
+    justify-self: flex-end;
+    cursor: pointer;
+}
+
+.submit-button-section {
+    display: flex;
+    justify-content: flex-end;
 }
