@@ -47,6 +47,13 @@ body {
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding: 0px 100px;
+    color: var(--text-orange);
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .nav-bar {
@@ -314,4 +321,46 @@ h2 {
 .submit-button-section {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 88px;
+}
+
+.abbreviation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.abbreviation {
+    font-family: "Handjet", sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    letter-spacing: 5%;
+}
+
+.abbreviation-subtext {
+    font-size: 12px;
+}
+
+.copyright-text {
+    font-size: 23px;
+    line-height: 120%;
+}
+
+.footer-links {
+    display: flex;
+    gap: 32px;
+}
+
+.legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 64px;
+}
+
+.legal-links a {
+    color: var(--text-orange);
+    font-size: 14px;
+    line-height: 120%;
 }
