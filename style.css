@@ -14,6 +14,10 @@
     --content-max-width: 1920px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -151,11 +155,23 @@ h2 {
 .github-button {
     color: var(--text-orange);
     border: solid 1px var(--text-green);
+    transition: 300ms ease;
+}
+
+.github-button:hover {
+    color: var(--text-green);
+    transition: 300ms ease;
 }
 
 .live-test-button {
     color: #0B042D;
     background-color: var(--text-green);
+    transition: 300ms ease;
+}
+
+.live-test-button:hover {
+    color: var(--text-orange);
+    transition: 300ms ease;
 }
 
 .row-reverse {
@@ -443,4 +459,31 @@ h1 {
 .contact-button:hover {
     color: var(--text-green);
     transition: all 0.4s ease;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+    margin-top: 104px;
+}
+
+.about-section img {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.about-title {
+    font-size: 54px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-weight: 500;
+    margin-bottom: 24px;
 }
