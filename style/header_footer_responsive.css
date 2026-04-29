@@ -1,0 +1,37 @@
+@media (max-width: 1150px) {
+    .header-content {
+        padding: var(--page-padding-1150);
+    }
+
+    .main-content {
+        padding: var(--page-padding-1150);
+    }
+
+    .footer-content {
+        padding: var(--page-padding-1150);
+    }
+}
+
+@media (max-width: 950px) {
+    .nav-links {
+        display: none;
+    }
+
+    .language-selector {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-content {
+        padding: var(--page-padding-700);
+    }
+
+    .main-content {
+        padding: var(--page-padding-700);
+    }
+
+    .footer-content {
+        padding: var(--page-padding-700);
+    }
+}

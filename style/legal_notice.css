@@ -1,5 +1,5 @@
 body {
-    background-color: #1E0A7D;
+    background: #1E0A7D;
     min-height: 100vh;
 }
 
@@ -34,4 +34,9 @@ h3 {
 
 .text-orange {
     color: var(--text-orange);
+}
+
+.header-legal-notice {
+    position: static;
+    background: #1E0A7D;
 }
