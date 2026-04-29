@@ -403,6 +403,10 @@ h1 {
     gap: 128px;
 }
 
+.about-contact {
+    margin-top: 32px;
+}
+
 .about-contact-button {
     font-size: 18px;
     line-height: 120%;
@@ -410,9 +414,27 @@ h1 {
     background-color: var(--text-green);
     border: none;
     padding: 15px 30px;
-    margin-top: 32px;
 }
 
 .about-contact-button:hover {
     color: var(--text-orange);
+}
+
+.scroll-up {
+    height: 50px;
+    width: 22px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.scroll-up:hover {
+    border: solid 1px var(--text-green);
+    padding: 3px 7px;
+    filter: brightness(0) saturate(100%) invert(77%) sepia(62%) saturate(2744%) hue-rotate(113deg) brightness(101%) contrast(98%);
+}
+
+.contact-links-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
