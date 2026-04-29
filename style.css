@@ -12,6 +12,8 @@
     --text-green: #02F4BF;
     --text-orange: #E15544;
     --content-max-width: 1920px;
+    --page-padding: 0px 100px;
+    --page-padding-1150: 0px 75px;
 }
 
 html {
@@ -45,19 +47,19 @@ header {
     align-items: center;
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: 0px 100px;
+    padding: var(--page-padding);
 }
 
 .main-content {
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: 0px 100px;
+    padding: var(--page-padding);
 }
 
 .footer-content {
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: 0px 100px;
+    padding: var(--page-padding);
     color: var(--text-orange);
 }
 
