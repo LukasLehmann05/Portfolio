@@ -116,3 +116,12 @@ header {
 .legal-links a:hover {
     color: var(--text-green);
 }
+
+.selected {
+    color: var(--text-green) !important;
+    text-decoration: underline;
+}
+
+.hover-green:hover {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(62%) saturate(2744%) hue-rotate(113deg) brightness(101%) contrast(98%);
+}
