@@ -34,7 +34,7 @@ header {
     position: sticky;
     top: 0;
     padding: 24px 0px;
-    background-color: #0B042D;
+    background: linear-gradient(rgb(11 4 45) 60%, rgb(11 4 45 / 0.5));
     color: var(--text-orange);
     z-index: 100;
 }

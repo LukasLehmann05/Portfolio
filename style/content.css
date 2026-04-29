@@ -353,3 +353,66 @@ h1 {
 .contact-links a:hover img {
     filter: brightness(0) saturate(100%) invert(77%) sepia(62%) saturate(2744%) hue-rotate(113deg) brightness(101%) contrast(98%);
 }
+
+.about-details {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 80%;
+}
+
+.about-details h3 {
+    font-size: 48px;
+    color: var(--text-orange);
+    line-height: 120%;
+    font-weight: 700;
+}
+
+.about-details img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.about-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-details-column {
+    display: flex;
+}
+
+.location-column {
+    gap: 64px;
+}
+
+.relocate-column {
+    justify-content: flex-end;
+}
+
+.relocate-column div {
+    margin-left: 208px;
+    margin-right: 55px;
+}
+
+.remote-column {
+    justify-content: flex-end;
+    gap: 128px;
+}
+
+.about-contact-button {
+    font-size: 18px;
+    line-height: 120%;
+    color: #0B042D;
+    background-color: var(--text-green);
+    border: none;
+    padding: 15px 30px;
+    margin-top: 32px;
+}
+
+.about-contact-button:hover {
+    color: var(--text-orange);
+}
