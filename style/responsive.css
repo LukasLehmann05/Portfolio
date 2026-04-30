@@ -20,6 +20,38 @@
     .hide-project-button {
         display: none;
     }
+
+    .contact-button {
+        display: none;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .hide-1100 {
+        display: none;
+    }
+
+    .about-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-details-column {
+        align-items: center;
+        width: 100%;
+    }
+
+    .about-icon-container{
+        width: 100%;
+    }
+
+    .relocate-column div {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -74,6 +106,10 @@
 @media (max-width: 800px) {
     .contact-section-title img {
         display: none;
+    }
+
+    .project-card img {
+        width: 95%;
     }
 }
 
