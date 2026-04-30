@@ -22,6 +22,28 @@
     }
 }
 
+@media (max-width: 800px) {
+    .footer-links {
+        display: none;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 45px;
+    }
+
+    .abbreviation-section {
+        margin-bottom: 8px;
+    }
+
+    .legal-links {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
 @media (max-width: 700px) {
     .header-content {
         padding: var(--page-padding-700);
@@ -33,5 +55,25 @@
 
     .footer-content {
         padding: var(--page-padding-700);
+    }
+}
+
+@media (max-width: 500px) {
+    .header-content {
+        padding: var(--page-padding-500);
+    }
+
+    .main-content {
+        padding: var(--page-padding-500);
+    }
+
+    .footer-content {
+        padding: var(--page-padding-500);
+    }
+}
+
+@media (max-width: 400px) {
+    .copyright-text {
+        font-size: 18px;
     }
 }
