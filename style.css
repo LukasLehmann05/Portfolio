@@ -11,7 +11,7 @@
 :root {
     --text-green: #02F4BF;
     --text-orange: #E15544;
-    --content-max-width: 1920px;
+    --content-max-width: calc(1920px - 100px);
     --page-padding: 0px 100px;
     --page-padding-1150: 0px 75px;
     --page-padding-700: 0px 50px;
