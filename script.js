@@ -7,6 +7,8 @@ let validate_text_name = document.getElementById("validate_text_name");
 let validate_text_email = document.getElementById("validate_text_email");
 let message_section = document.getElementById("message_section");
 
+let guidlines_checkbox = document.getElementById("guidlines_checkbox");
+
 let canSubmit = false
 
 let isNameValid = false
@@ -14,11 +16,13 @@ let isEmailValid = false
 let isMessageValid = false
 
 function submitContact() {
-    let name = name_input.value
-    let email = email_input.value
-    let message = message_input.value
+    if (checkForLegalRequirement()) {
+        let name = name_input.value
+        let email = email_input.value
+        let message = message_input.value
 
-    checkForRequired(name, email, message)
+        checkForRequired(name, email, message)
+    }
 }
 
 function resetValidation() {
@@ -69,4 +73,20 @@ function missingInput() {
 
 function submit() {
     // Your submit logic here
+}
+
+function checkForLegalRequirement() {
+    if (guidlines_checkbox.checked) {
+        toggleSubmitButton(true)
+    } else {
+        toggleSubmitButton(false)
+    }
+}
+
+function toggleSubmitButton(state) {
+    if (state) {
+        submit_button.classList.add("can-submit")
+    } else if (submit_button.classList.contains("can-submit")) {
+        submit_button.classList.remove("can-submit")
+    }
 }

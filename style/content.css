@@ -210,7 +210,7 @@ h2 {
 }
 
 .message-input {
-    width: 100%;
+    width: calc(100% - 28px);
     height: calc(100% - 30px);
     border: solid 1px var(--text-green);
     background-color: transparent;
@@ -254,6 +254,7 @@ h2 {
     font-weight: 500;
     justify-self: flex-end;
     cursor: pointer;
+    transition: 300ms ease;
 }
 
 .submit-button-section {
@@ -534,4 +535,16 @@ h1 {
 
 .about-info-text {
     max-width: 700px;
+}
+
+.can-submit {
+    color: var(--text-orange);
+    border: solid 1px var(--text-green);
+    transition: 300ms ease;
+}
+
+.can-submit:hover {
+    color: var(--text-green);
+    border: solid 1px var(--text-green);
+    transition: 300ms ease;
 }
