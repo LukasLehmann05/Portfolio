@@ -276,24 +276,30 @@
                             </div>
                         </div>
 
-                        <textarea type="text" class="message-input" placeholder="Ihre Nachricht" id="message_input"></textarea>
+                        <div class="message-section" id="message_section">
+                            <textarea type="text" class="message-input" placeholder="Ihre Nachricht"
+                                id="message_input"></textarea>
+                            <p id="validate_text_message">Bitte teilen Sie mir Ihr Anliegen mit.</p>
+                        </div>
                     </div>
 
                     <div class="submit-section">
                         <div>
                             <input type="checkbox" name="" id="guidlines_checkbox" class="guidlines-checkbox">
-                            <label for="guidlines_checkbox">Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner
+                            <label for="guidlines_checkbox">Ich habe die Datenschutzrichtlinie gelesen und stimme der
+                                Verarbeitung meiner
                                 Daten zu.</label>
                         </div>
                         <div class="submit-button-section">
-                            <button type="button" class="submit-button" id="submit_button" onclick="submitContact()">Senden</button>
+                            <button type="button" class="submit-button" id="submit_button"
+                                onclick="submitContact()">Senden</button>
                         </div>
                     </div>
                 </form>
             </section>
         </div>
     </main>
-    
+
     <footer id="footer">
         <div class="footer-content">
             <section class="footer-info">

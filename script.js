@@ -5,6 +5,7 @@ let submit_button = document.getElementById("submit_button");
 
 let validate_text_name = document.getElementById("validate_text_name");
 let validate_text_email = document.getElementById("validate_text_email");
+let message_section = document.getElementById("message_section");
 
 let canSubmit = false
 
@@ -61,7 +62,7 @@ function missingInput() {
     }
 
     if (!isMessageValid) {
-
+        message_section.classList.add("invalid-input")
     }
 }
 

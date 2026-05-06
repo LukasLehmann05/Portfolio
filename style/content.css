@@ -210,7 +210,8 @@ h2 {
 }
 
 .message-input {
-    width: 45%;
+    width: 100%;
+    height: calc(100% - 30px);
     border: solid 1px var(--text-green);
     background-color: transparent;
     color: var(--text-green);
@@ -512,4 +513,21 @@ h1 {
 
 .form-input-left .invalid-input {
     display: block;
+}
+
+.message-section {
+    width: 45%;
+}
+
+.message-section p {
+    color: red;
+    display: none;
+}
+
+.invalid-input p {
+    display: block;
+}
+
+.invalid-input textarea {
+    height: calc(100% - 51px);
 }
