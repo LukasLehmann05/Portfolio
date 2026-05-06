@@ -266,29 +266,34 @@
                 <form class="contact-form">
                     <div class="text-input-section">
                         <div class="form-input-left">
-                            <input type="text" placeholder="Ihr Name">
-                            <input type="text" placeholder="E-Mail">
+                            <div>
+                                <input type="text" placeholder="Ihr Name" id="name_input" class="contact-input">
+                                <p id="validate_text_name">Bitte gib deinen Namen an.</p>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="E-Mail" id="email_input" class="contact-input">
+                                <p id="validate_text_email">Bitte gib deine E-Mail-Adresse an.</p>
+                            </div>
                         </div>
 
-                        <textarea type="text" class="message-input" placeholder="Ihre Nachricht"></textarea>
+                        <textarea type="text" class="message-input" placeholder="Ihre Nachricht" id="message_input"></textarea>
                     </div>
 
                     <div class="submit-section">
                         <div>
-                            <input type="checkbox" name="" id="guidlines_checkbox" class="guidlines-checkbox"
-                                placeholder="✓">
-                            <label for="">Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner
+                            <input type="checkbox" name="" id="guidlines_checkbox" class="guidlines-checkbox">
+                            <label for="guidlines_checkbox">Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner
                                 Daten zu.</label>
                         </div>
                         <div class="submit-button-section">
-                            <button type="submit" class="submit-button">Senden</button>
+                            <button type="button" class="submit-button" id="submit_button" onclick="submitContact()">Senden</button>
                         </div>
                     </div>
                 </form>
             </section>
         </div>
     </main>
-
+    
     <footer id="footer">
         <div class="footer-content">
             <section class="footer-info">
