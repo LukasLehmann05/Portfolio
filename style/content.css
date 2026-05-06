@@ -528,6 +528,10 @@ h1 {
     display: block;
 }
 
-.invalid-input textarea {
+.invalid-input-height textarea {
     height: calc(100% - 51px);
+}
+
+.about-info-text {
+    max-width: 700px;
 }

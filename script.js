@@ -46,6 +46,7 @@ function checkForRequired(name, email, message) {
     }
 
     if (!canSubmit) {
+        message_section.classList.add("invalid-input-height")
         missingInput()
     } else {
         submit()
