@@ -58,7 +58,7 @@ function checkForRequired(name, email, message) {
         input_section_message.classList.add("invalid-input-height")
         missingInput()
     } else {
-        submit()
+        submit(name, email, message)
     }
 }
 
@@ -79,8 +79,18 @@ function missingInput() {
     }
 }
 
-function submit() {
-    // Your submit logic here
+async function submit(name, email, message) {
+    fetch("php/contact.php", {
+        method: "POST",
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            userMessage: message
+        }),
+        headers: {
+            "Content-Type": "application/json; charset=utf-8"
+        }
+    })
 }
 
 function checkForLegalRequirement() {
