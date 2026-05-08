@@ -57,7 +57,8 @@
                 <img src="./img/image_placeholder.png" alt="placeholder" class="hide-1100">
                 <div class="about-content">
                     <h2 class="about-title">Warum ich</h2>
-                    <p class="about-info-text">Bereits seit Ende 2019 beschäftige ich mich im Bereich der Entwicklung. Seit dem baute ich
+                    <p class="about-info-text">Bereits seit Ende 2019 beschäftige ich mich im Bereich der Entwicklung.
+                        Seit dem baute ich
                         kleine Spiele in meiner Freizeit wo ich Erfahrungen im Bereich der Programmierung, 3D
                         Modellierung
                         und im UI Design sammeln konnte. Im Juli 2025 entschied ich mich dazu, mein Wissen weiter zu
@@ -267,26 +268,35 @@
                     <div class="text-input-section">
                         <div class="form-input-left">
                             <div>
-                                <input type="text" placeholder="Ihr Name" id="name_input" class="contact-input">
+                                <div class="input-container" id="input_section_name">
+                                    <input type="text" placeholder="Ihr Name" id="name_input" class="contact-input" onclick="removeWrongInput('name')">
+                                </div>
                                 <p id="validate_text_name">Bitte gib deinen Namen an.</p>
                             </div>
                             <div>
-                                <input type="text" placeholder="E-Mail" id="email_input" class="contact-input">
+                                <div class="input-container" id="input_section_email">
+                                    <input type="text" placeholder="E-Mail" id="email_input" class="contact-input" onclick="removeWrongInput('email')">
+                                </div>
                                 <p id="validate_text_email">Bitte gib deine E-Mail-Adresse an.</p>
                             </div>
                         </div>
 
                         <div class="message-section" id="message_section">
-                            <textarea type="text" class="message-input" placeholder="Ihre Nachricht"
-                                id="message_input"></textarea>
+                            <div class="message-section-input input-container" id="input_section_message" onclick="removeWrongInput('message')">
+                                <textarea type="text" class="message-input" placeholder="Ihre Nachricht"
+                                    id="message_input"></textarea>
+                            </div>
                             <p id="validate_text_message">Bitte teilen Sie mir Ihr Anliegen mit.</p>
                         </div>
                     </div>
 
                     <div class="submit-section">
-                        <div>
-                            <input type="checkbox" name="" id="guidlines_checkbox" class="guidlines-checkbox" onclick="checkForLegalRequirement()">
-                            <label for="guidlines_checkbox">Ich habe die Datenschutzrichtlinie gelesen und stimme der
+                        <div class="legal-requirement" onclick="toggleCheck()">
+                            <div class="guidlines-checkbox" id="guidlines_checkbox">
+                                <p>&#x2714;</p>
+                            </div>
+                            <label for="guidlines_checkbox">Ich habe die <a
+                                    href="./de/privacy_policy.html">Datenschutzrichtlinie</a> gelesen und stimme der
                                 Verarbeitung meiner
                                 Daten zu.</label>
                         </div>
@@ -332,5 +342,6 @@
 
 </body>
 <script src="./script.js"></script>
+<script src="./js/template.js"></script>
 
 </html>

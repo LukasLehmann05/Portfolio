@@ -190,7 +190,7 @@ h2 {
 }
 
 .contact-form input {
-    border: solid 1px var(--text-green);
+    border: none;
     background-color: transparent;
     color: var(--text-green);
     font-size: 18px;
@@ -211,8 +211,7 @@ h2 {
 
 .message-input {
     width: calc(100% - 28px);
-    height: calc(100% - 30px);
-    border: solid 1px var(--text-green);
+    border: none;
     background-color: transparent;
     color: var(--text-green);
     font-size: 18px;
@@ -239,9 +238,10 @@ h2 {
     padding: 0px;
     border-radius: 1px;
     color: transparent;
+    cursor: pointer;
 }
 
-.guidlines-checkbox:checked {
+.legal-requirement:hover .guidlines-checkbox {
     background-color: var(--text-green);
 }
 
@@ -529,10 +529,6 @@ h1 {
     display: block;
 }
 
-.invalid-input-height textarea {
-    height: calc(100% - 51px);
-}
-
 .about-info-text {
     max-width: 700px;
 }
@@ -547,4 +543,53 @@ h1 {
     color: var(--text-green);
     border: solid 1px var(--text-green);
     transition: 300ms ease;
+}
+
+.checked {
+    background-color: var(--text-green);
+}
+
+.checked p {
+    color: var(--text-orange);
+    justify-self: center;
+    align-self: center;
+    font-size: 13px;
+}
+
+.legal-requirement {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.legal-requirement a {
+    color: var(--text-orange);
+}
+
+.legal-requirement label {
+    cursor: pointer;
+}
+
+.input-container {
+    border: solid 1px var(--text-green);
+    display: flex;
+}
+
+.input-feedback {
+    height: 24px;
+    align-self: center;
+    margin: 0px 10px;
+    object-fit: contain;
+}
+
+.message-section-input {
+    height: 100%;
+}
+
+.invalid-input-height {
+    height: calc(100% - 21px);
+}
+
+.message-section .invalid-input {
+    display: block;
 }

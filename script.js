@@ -3,17 +3,22 @@ let email_input = document.getElementById("email_input");
 let message_input = document.getElementById("message_input");
 let submit_button = document.getElementById("submit_button");
 
+let guidlines_checkbox = document.getElementById("guidlines_checkbox");
+
+let input_section_name = document.getElementById("input_section_name");
+let input_section_email = document.getElementById("input_section_email");
+let input_section_message = document.getElementById("input_section_message");
 let validate_text_name = document.getElementById("validate_text_name");
 let validate_text_email = document.getElementById("validate_text_email");
-let message_section = document.getElementById("message_section");
-
-let guidlines_checkbox = document.getElementById("guidlines_checkbox");
+let validate_text_message = document.getElementById("validate_text_message");
 
 let canSubmit = false
 
 let isNameValid = false
 let isEmailValid = false
 let isMessageValid = false
+
+let acceptedGuidlines = false
 
 function submitContact() {
     if (checkForLegalRequirement()) {
@@ -50,7 +55,7 @@ function checkForRequired(name, email, message) {
     }
 
     if (!canSubmit) {
-        message_section.classList.add("invalid-input-height")
+        input_section_message.classList.add("invalid-input-height")
         missingInput()
     } else {
         submit()
@@ -59,15 +64,18 @@ function checkForRequired(name, email, message) {
 
 function missingInput() {
     if (!isNameValid) {
+        input_section_name.innerHTML += returnWrongInputIcon("name")
         validate_text_name.classList.add("invalid-input")
     }
 
     if (!isEmailValid) {
+        input_section_email.innerHTML += returnWrongInputIcon("email")
         validate_text_email.classList.add("invalid-input")
     }
 
     if (!isMessageValid) {
-        message_section.classList.add("invalid-input")
+        input_section_message.innerHTML += returnWrongInputIcon("message")
+        validate_text_message.classList.add("invalid-input")
     }
 }
 
@@ -76,10 +84,12 @@ function submit() {
 }
 
 function checkForLegalRequirement() {
-    if (guidlines_checkbox.checked) {
+    if (acceptedGuidlines) {
         toggleSubmitButton(true)
+        return true
     } else {
         toggleSubmitButton(false)
+        return false
     }
 }
 
@@ -88,5 +98,26 @@ function toggleSubmitButton(state) {
         submit_button.classList.add("can-submit")
     } else if (submit_button.classList.contains("can-submit")) {
         submit_button.classList.remove("can-submit")
+    }
+}
+
+function toggleCheck() {
+    if (guidlines_checkbox.classList.contains("checked")) {
+        guidlines_checkbox.classList.remove("checked")
+        acceptedGuidlines = false
+        checkForLegalRequirement()
+    } else {
+        guidlines_checkbox.classList.add("checked")
+        acceptedGuidlines = true
+        checkForLegalRequirement()
+    }
+}
+
+function removeWrongInput(id) {
+    document.getElementById("icon_" + id)?.remove()
+    document.getElementById("validate_text_" + id)?.classList.remove("invalid-input")
+
+    if (id == "message") {
+        document.getElementById("input_section_message").classList.remove("invalid-input-height")
     }
 }
