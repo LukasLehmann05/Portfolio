@@ -2,6 +2,7 @@
     min-height: calc(100vh - 101px);
     display: flex;
     align-items: flex-end;
+    position: relative;
 }
 
 h2 {
@@ -181,7 +182,7 @@ h2 {
 }
 
 .contact-info-text {
-    max-width: 40%;
+    max-width: 45%;
 }
 
 .text-input-section {
@@ -310,7 +311,7 @@ h1 {
 
 .contact-button {
     position: absolute;
-    left: 60px;
+    left: -40px;
     top: 40%;
     transform: rotate(270deg);
     background: none;
@@ -592,4 +593,12 @@ h1 {
 
 .message-section .invalid-input {
     display: block;
+}
+
+.contact-info-right {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: flex-end;
 }
