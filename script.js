@@ -44,7 +44,7 @@ function checkForRequired(name, email, message) {
         isNameValid = false
     }
 
-    if (email.trim() == "") {
+    if (email.trim() == "" || !validateEmail(email)) {
         canSubmit = false
         isEmailValid = false
     }
@@ -64,18 +64,28 @@ function checkForRequired(name, email, message) {
 
 function missingInput() {
     if (!isNameValid) {
+        removeWrongInput("name")
         input_section_name.innerHTML += returnWrongInputIcon("name")
         validate_text_name.classList.add("invalid-input")
     }
 
     if (!isEmailValid) {
+        removeWrongInput("email")
         input_section_email.innerHTML += returnWrongInputIcon("email")
         validate_text_email.classList.add("invalid-input")
     }
 
     if (!isMessageValid) {
+        removeWrongInput("message")
         input_section_message.innerHTML += returnWrongInputIcon("message")
         validate_text_message.classList.add("invalid-input")
+    }
+}
+
+function RemoveInputAlert(id) {
+    let alert_to_remove = document.getElementById("icon_" + id)
+    if (alert_to_remove) {
+        alert_to_remove.remove()
     }
 }
 
@@ -130,4 +140,9 @@ function removeWrongInput(id) {
     if (id == "message") {
         document.getElementById("input_section_message").classList.remove("invalid-input-height")
     }
+}
+
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
 }

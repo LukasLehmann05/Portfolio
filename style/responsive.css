@@ -94,6 +94,10 @@
         width: calc(100% - 28px);
     }
 
+    .message-section {
+        width: 100%;
+    }
+
     .contact-links {
         display: none;
     }
