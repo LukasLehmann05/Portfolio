@@ -5,37 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lukas Lehmann</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../style/legal_notice.css">
-    <link rel="stylesheet" href="../style/responsive.css">
-        
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/content.css">
+    <link rel="stylesheet" href="./style/header_footer.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+    <link rel="stylesheet" href="./style/header_footer_responsive.css">
+    <link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
 </head>
 
-<body>
+<body onload="init()" onscroll="checkCurrentScroll()">
     <header>
         <div class="header-content">
             <div class="nav-bar">
                 <p>&lt;LL&gt;</p>
                 <nav class="nav-links">
-                    <a href="">Why me?</a>
-                    <a href="">Skills</a>
-                    <a href="">Projects</a>
-                    <a href="">Contact</a>
+                    <a href="#about_section highlight" id="nav_about_section">About me</a>
+                    <a href="#skill_section highlight" id="nav_skill_section">Skills</a>
+                    <a href="#project_section highlight" id="nav_project_section">Projects</a>
+                    <a href="#contact_section highlight" id="nav_contact_section">Contact</a>
                 </nav>
             </div>
             <div class="language-selector">
-                <a class="language-text" href="../de/index.html">DE</a>
+                <p class="language-text">DE</p>
                 <p>|</p>
-                <a class="language-text" href="#">EN</a>
+                <p class="language-text current-language">EN</p>
             </div>
         </div>
     </header>
 
     <main>
         <div class="main-content">
-            <section class="hero-section">
+            <section class="hero-section" id="hero_section">
                 <a class="scroll-down hover-green" href="#about_section">
-                    <img src="../img/icons/arrow_down.svg" alt="arrow down">
+                    <img src="./img/icons/arrow_down.svg" alt="arrow down">
                 </a>
                 <a class="contact-button" href="#footer">
                     Contact
@@ -47,94 +49,102 @@
                     </div>
 
                     <div>
-                        <img src="../img/image_placeholder.png" alt="placeholder" class="hero-section-image">
+                        <img src="./img/image_placeholder.png" alt="placeholder" class="hero-section-image">
                     </div>
                 </div>
             </section>
-            <section class="about-section" id="about_section">
-                <img src="../img/image_placeholder.png" alt="placeholder">
+            <section class="about-section" id="about_section highlight">
+                <img src="./img/image_placeholder.png" alt="placeholder" class="hide-1100">
                 <div class="about-content">
-                    <h2 class="about-title">Why me</h2>
-                    <p>Bereits seit Ende 2019 beschäftige ich mich im Bereich der Entwicklung. Seit dem baute ich
-                        kleine Spiele in meiner Freizeit wo ich Erfahrungen im Bereich der Programmierung, 3D
-                        Modellierung
-                        und im UI Design sammeln konnte. Im Juli 2025 entschied ich mich dazu, mein Wissen weiter zu
-                        vertiefen und in den Bereich der Webentwicklung einzusteigen. Aber nicht als Hobby, sondern als
-                        Beruf.
+                    <h2 class="about-title">About me</h2>
+                    <p class="about-info-text">Since the end of 2019, I have been involved in the field of development.
+                        Since then, I have built
+                        small games in my free time where I gained experience in programming, 3D
+                        modeling,
+                        and UI design. In July 2025, I decided to further deepen my knowledge and enter the field of web development. But not as a hobby, but as
+                        a profession.
                     </p>
                     <section class="about-details">
                         <div class="about-details-column location-column">
-                            <h3>I am</h3>
+                            <h3 class="hide-1350">I am</h3>
                             <div class="about-icon-container">
-                                <img src="../img/icons/location.svg" alt="location icon" class="about-icons">
-                                <p>located in <br> Dresden</p>
+                                <div class="location-icon-section">
+                                    <img src="./img/icons/location.svg" alt="location icon"
+                                        class="about-icons hide-hover">
+                                    <img src="./img/icons/location_marker_hover.svg" alt="location hover icon"
+                                        class="about-icons show-hover">
+                                </div>
+                                <p>located in <br class="hide-1350"> Dresden</p>
                             </div>
                         </div>
 
                         <div class="about-details-column relocate-column">
-                            <img src="../img/icons/arrow_curved_down.svg" alt="arrow">
+                            <img src="./img/icons/arrow_curved_down.svg" alt="arrow" class="hide-1350">
                             <div class="about-icon-container">
-                                <img src="../img/icons/icon_relocate.svg" alt="relocate icon" class="about-icons">
-                                <p>work<br> on-site</p>
+                                <img src="./img/icons/icon_relocate.svg" alt="relocate icon" class="about-icons">
+                                <p>or work<br class="hide-1350"> on-site</p>
                             </div>
                         </div>
 
                         <div class="about-details-column remote-column">
                             <div class="about-icon-container">
-                                <img src="../img/icons/icon_remote.svg" alt="remote icon" class="about-icons">
-                                <p>open to <br> work remote</p>
-                                <img src="../img/icons/arrow_curved_up.svg" alt="arrow">
+                                <img src="../img/icons/icon_remote.svg" alt="remote icon"
+                                    class="about-icons hide-remote">
+                                <img src="./img/icons/remote_hover.svg" alt="remote hover icon"
+                                    class="about-icons show-remote">
+                                <p>open for <br class="hide-1350"> remote work</p>
+                                <img src="./img/icons/arrow_curved_up.svg" alt="arrow" class="hide-1350">
                             </div>
 
-                            <img src="../img/icons/arrow_curved_down_2.svg" alt="arrow">
+                            <img src="./img/icons/arrow_curved_down_2.svg" alt="arrow" class="hide-1350">
                         </div>
 
-                        <div>
-                            <button class="about-contact-button">Let`s talk</button>
+                        <div class="about-contact">
+                            <a class="about-contact-button" href="#contact_section">Let's talk</a>
                         </div>
                     </section>
                 </div>
             </section>
-            <section class="skill-section">
+            <section class="skill-section" id="skill_section highlight">
                 <h2>My Skills</h2>
                 <div class="all-skills">
                     <div class="language-card">
-                        <img src="../img/icons_languages/angular.svg" alt="angular">
+                        <img src="./img/icons_languages/angular.svg" alt="angular">
                         <p>Angular</p>
                     </div>
 
                     <div class="language-card">
-                        <img src="../img/icons_languages/css.svg" alt="css">
+                        <img src="./img/icons_languages/css.svg" alt="css">
                         <p>CSS</p>
                     </div>
 
                     <div class="language-card">
-                        <img src="../img/icons_languages/javascript.svg" alt="javascript">
+                        <img src="./img/icons_languages/javascript.svg" alt="javascript">
                         <p>JavaScript</p>
                     </div>
 
                     <div class="language-card">
-                        <img src="../img/icons_languages/html.svg" alt="html">
+                        <img src="./img/icons_languages/html.svg" alt="html">
                         <p>HTML</p>
                     </div>
 
                     <div class="language-card">
-                        <img src="../img/icons_languages/typescript.svg" alt="typescript">
+                        <img src="./img/icons_languages/typescript.svg" alt="typescript">
                         <p>TypeScript</p>
                     </div>
 
                     <div class="language-card">
-                        <img src="../img/icons_languages/scrum.svg" alt="scrum">
+                        <img src="./img/icons_languages/scrum.svg" alt="scrum">
                         <p>Scrum</p>
                     </div>
 
                     <div class="language-card">
-                        <img src="../img/icons_languages/git.svg" alt="git">
+                        <img src="./img/icons_languages/git.svg" alt="git">
                         <p>Git</p>
                     </div>
 
                     <div class="language-card">
-                        <img src="../img/icons_languages/other_skill.svg" alt="other skill">
+                        <img src="./img/icons_languages/other_skill.svg" alt="other skill">
                         <p>Other Skill</p>
                     </div>
 
@@ -142,16 +152,20 @@
 
                 </div>
             </section>
-            <section class="project-section">
+            <section class="project-section" id="project_section highlight">
                 <h2>My Projects</h2>
 
                 <div class="projects">
                     <section class="project-card">
-                        <img src="../img/project_img/join.png" alt="join project image">
+                        <img src="./img/project_img/join.png" alt="join project image">
                         <div>
                             <h3 class="project-title">Join</h3>
                             <p class="project-languages">HTML | CSS | JavaScript | Firebase</p>
-                            <p>Description</p>
+                            <p>Join is a Kanban board project that allows you to efficiently manage tasks
+                                and track any progress within the team.
+                                It offers features such as drag and drop, search functionality, contact management, and
+                                creating subtasks.
+                            </p>
                             <div class="project-links">
                                 <a href="https://github.com/LukasLehmann05/Join" class="github-button">Github</a>
                                 <a href="#" class="live-test-button">Live Test</a>
@@ -160,11 +174,13 @@
                     </section>
 
                     <section class="project-card row-reverse">
-                        <img src="../img/project_img/pollo_loco.png" alt="pollo loco project image">
-                        <div>
+                        <img src="./img/project_img/pollo_loco.png" alt="pollo loco project image">
+                        <div class="align-right">
                             <h3 class="project-title">Pollo Loco</h3>
                             <p class="project-languages">HTML | CSS | JavaScript</p>
-                            <p>Description</p>
+                            <p>El Pollo Loco is a jump and run game. The player must defeat various enemies
+                                to win the game. This project focused on object-oriented programming. The game also includes collectible items
+                                and an interactive menu.</p>
                             <div class="project-links">
                                 <a href="https://github.com/LukasLehmann05/El-Pollo-Loco"
                                     class="github-button">Github</a>
@@ -185,8 +201,8 @@
                             Join
                         </p>
                         <p class="feedback-text">
-                            Lukas überzeugt durch seine Fachkenntnisse und hervorragende Arbeitsmoral. Durch sein
-                            kompetentes Auftreten, ist er eine Bereicherung für jedes Team.
+                            Lukas impresses with his expertise and excellent work ethic. Through his
+                            competent demeanor, he is an asset to any team.
                         </p>
                     </section>
 
@@ -198,8 +214,7 @@
                             Join
                         </p>
                         <p class="feedback-text">
-                            Lukas ist eine Bereicherung für jedes Team. Neben seinen fachlichen Fähigkeiten zeichnet er
-                            sich vor allem durch seine kommunikative Stärke und sein problemorientiertes Handeln aus.
+                            Lukas is an asset to any team. In addition to his professional skills, he stands out for his communication strength and problem-oriented approach.
                         </p>
                     </section>
 
@@ -211,31 +226,37 @@
                             Kochwelt
                         </p>
                         <p class="feedback-text">
-                            Die Zusammenarbeit mit Lukas Lehmann hat viel Spaß gemacht. Er war eine große Unterstützung
-                            bei projektbezogenen Aufgaben - und darüber hinaus.
+                            Working with Lukas Lehmann was a lot of fun. He was a great support
+                            with project-related tasks - and beyond.
                         </p>
                     </section>
                 </div>
 
             </section>
-            <section class="contact-section">
+            <section class="contact-section" id="contact_section highlight">
                 <div class="contact-section-title">
-                    <h2>Contact me</h2>
-                    <img src="../img/icons/arrow_down_right.svg" alt="">
+                    <h2>Contact Me</h2>
+                    <img src="./img/icons/arrow_down_right.svg" alt="">
                 </div>
                 <div class="contact-info">
-                    <p class="contact-info-text">Gerne erweitere ich meine Fähigkeiten und Kenntnisse, und freue mich auf eine zukünftige Zusammenarbeit. 
-                        Zögern Sie nicht, mich zu kontaktieren, um mehr über mich zu erfahren. Ich freue mich darauf, von Ihnen zu hören.
-                    </p>
-                    <div>
-                        <div class="contact-links">
-                            <a href="#">
-                                <img src="../img/icons/icon_mail.svg" alt="mail_icon" class="contact-img">
-                                <p>E-mail: lukaslehmann05@gmail.com</p>
-                            </a>
-                            <a href="#">
-                                <img src="../img/icons/icon_phone.svg" alt="phone_icon" class="contact-img">
-                                <p>Tel: +49 176 63782510</p>
+                    <div class="contact-links-section">
+                        <p class="contact-info-text">I am always eager to expand my skills and knowledge, and I look forward to future collaborations.
+                            Feel free to contact me to learn more about me. I look forward to hearing from you.
+                        </p>
+                        <div class="contact-info-right">
+                            <div class="contact-links">
+                                <a href="mailto:lukaslehmann05@gmail.com">
+                                    <img src="./img/icons/icon_mail.svg" alt="mail_icon" class="contact-img">
+                                    <p>E-mail: lukaslehmann05@gmail.com</p>
+                                </a>
+                                <a href="tel:+4917663782510">
+                                    <img src="./img/icons/icon_phone.svg" alt="phone_icon" class="contact-img">
+                                    <p>Tel: +49 176 63782510</p>
+                                </a>
+                            </div>
+
+                            <a href="#hero_section">
+                                <img src="./img/icons/arrow_up.svg" alt="scroll up" class="scroll-up">
                             </a>
                         </div>
                     </div>
@@ -243,21 +264,44 @@
                 <form class="contact-form">
                     <div class="text-input-section">
                         <div class="form-input-left">
-                            <input type="text" placeholder="Ihr Name">
-                            <input type="text" placeholder="E-Mail">
+                            <div>
+                                <div class="input-container" id="input_section_name">
+                                    <input type="text" placeholder="Ihr Name" id="name_input" class="contact-input"
+                                        onclick="removeWrongInput('name')">
+                                </div>
+                                <p id="validate_text_name">Please enter your name.</p>
+                            </div>
+                            <div>
+                                <div class="input-container" id="input_section_email">
+                                    <input type="email" placeholder="E-Mail" id="email_input" class="contact-input"
+                                        onclick="removeWrongInput('email')">
+                                </div>
+                                <p id="validate_text_email">Please enter your email address.</p>
+                            </div>
                         </div>
 
-                        <textarea type="text" class="message-input" placeholder="Ihre Nachricht"></textarea>
+                        <div class="message-section" id="message_section">
+                            <div class="message-section-input input-container" id="input_section_message"
+                                onclick="removeWrongInput('message')">
+                                <textarea class="message-input" placeholder="Your Message"
+                                    id="message_input"></textarea>
+                            </div>
+                            <p id="validate_text_message">Please enter your message.</p>
+                        </div>
                     </div>
 
                     <div class="submit-section">
-                        <div>
-                            <input type="checkbox" name="" id="guidlines_checkbox" class="guidlines-checkbox"
-                                placeholder="✓">
-                            <label for="">Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+                        <div class="legal-requirement" onclick="toggleCheck()">
+                            <div class="guidlines-checkbox" id="guidlines_checkbox">
+                                <p>&#x2714;</p>
+                            </div>
+                            <label for="guidlines_checkbox">I have read the <a
+                                    href="./en/privacy_policy.html">Privacy Policy</a> and agree to the processing of my
+                                data.</label>
                         </div>
                         <div class="submit-button-section">
-                            <button type="submit" class="submit-button">Send</button>
+                            <button type="button" class="submit-button" id="submit_button"
+                                onclick="submitContact()">Send</button>
                         </div>
                     </div>
                 </form>
@@ -277,25 +321,28 @@
                 </p>
                 <div class="footer-links">
                     <a href="https://github.com/LukasLehmann05">
-                        <img src="../img/icons/icon_github.svg" alt="github" class="hover-green">
+                        <img src="./img/icons/icon_github.svg" alt="github" class="hover-green">
                     </a>
                     <a href="#">
-                        <img src="../img/icons/icon_mail_round.svg" alt="mail" class="hover-green">
+                        <img src="./img/icons/icon_mail_round.svg" alt="mail" class="hover-green">
                     </a>
                     <a href="https://www.linkedin.com/in/lukas-lehmann-b7b5683bb/">
-                        <img src="../img/icons/icon_linkedin.svg" alt="linkedin" class="hover-green">
+                        <img src="./img/icons/icon_linkedin.svg" alt="linkedin" class="hover-green">
                     </a>
                 </div>
             </section>
 
             <section class="legal-links">
-                <a href="../en/legal_notice_en.html">Legal notice</a>
-                <a href="#">privacy policy</a>
+                <a href="./en/legal_notice.html">Legal Notice</a>
+                <a href="./en/privacy_policy.html">Privacy Policy</a>
             </section>
         </div>
     </footer>
 
 </body>
-<script src="../script.js"></script>
+<script src="./script.js"></script>
+<script src="./js/contact.js"></script>
+<script src="./js/template.js"></script>
+<script src="./js/section_highlight.js"></script>
 
 </html>

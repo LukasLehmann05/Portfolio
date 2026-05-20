@@ -13,16 +13,16 @@
     <link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
 </head>
 
-<body onload="init()">
+<body onload="init()" onscroll="checkCurrentScroll()">
     <header>
         <div class="header-content">
             <div class="nav-bar">
                 <p>&lt;LL&gt;</p>
                 <nav class="nav-links">
-                    <a href="#about_section">Warum ich</a>
-                    <a href="#skill_section">Fähigkeiten</a>
-                    <a href="#project_section">Projekte</a>
-                    <a href="#contact_section">Kontakt</a>
+                    <a href="#about_section highlight" id="nav_about_section">Warum ich</a>
+                    <a href="#skill_section highlight" id="nav_skill_section">Fähigkeiten</a>
+                    <a href="#project_section highlight" id="nav_project_section">Projekte</a>
+                    <a href="#contact_section highlight" id="nav_contact_section">Kontakt</a>
                 </nav>
             </div>
             <div class="language-selector">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about-section" id="about_section">
+            <section class="about-section" id="about_section highlight">
                 <img src="./img/image_placeholder.png" alt="placeholder" class="hide-1100">
                 <div class="about-content">
                     <h2 class="about-title">Warum ich</h2>
@@ -106,7 +106,7 @@
                     </section>
                 </div>
             </section>
-            <section class="skill-section" id="skill_section">
+            <section class="skill-section" id="skill_section highlight">
                 <h2>Meine Fähigkeiten</h2>
                 <div class="all-skills">
                     <div class="language-card">
@@ -153,7 +153,7 @@
 
                 </div>
             </section>
-            <section class="project-section" id="project_section">
+            <section class="project-section" id="project_section highlight">
                 <h2>Meine Projekte</h2>
 
                 <div class="projects">
@@ -236,7 +236,7 @@
                 </div>
 
             </section>
-            <section class="contact-section" id="contact_section">
+            <section class="contact-section" id="contact_section highlight">
                 <div class="contact-section-title">
                     <h2>Kontaktieren Sie mich</h2>
                     <img src="./img/icons/arrow_down_right.svg" alt="">
@@ -349,5 +349,6 @@
 <script src="./script.js"></script>
 <script src="./js/contact.js"></script>
 <script src="./js/template.js"></script>
+<script src="./js/section_highlight.js"></script>
 
 </html>

@@ -12,7 +12,7 @@ h2 {
 }
 
 .projects {
-    margin-top: 69px;
+    padding-top: 69px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,6 +23,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 105px;
 }
 
 .project-card {
@@ -137,15 +138,14 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 32px;
     margin-top: 32px;
-    margin-bottom: 105px;
 }
 
 .skill-section {
-    margin-top: 103px;
+    padding-top: 103px;
 }
 
 .contact-section {
-    margin-top: 104px;
+    padding-top: 104px;
 }
 
 .contact-section-title {
