@@ -33,4 +33,5 @@ html {
 body {
     background: linear-gradient(to bottom, #13074E, #1D0A79F2);
     color: var(--text-green);
+    min-height: 100vh;
 }
