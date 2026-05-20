@@ -63,6 +63,10 @@ header {
     font-size: 18px;
 }
 
+.language-selector a {
+    color: var(--text-orange);
+}
+
 .language-text:hover{
     color: var(--text-green);
     cursor: pointer;
@@ -122,7 +126,7 @@ header {
     text-decoration: underline;
 }
 
-.current-language {
+.language-selector .current-language {
     color: var(--text-green);
 }
 

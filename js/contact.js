@@ -105,7 +105,7 @@ async function submit(name, email, message) {
         });
 
         if (response.ok) {
-
+            displayResponse()
         }
     } catch (error) {
         console.error("Fetch error:", error);
