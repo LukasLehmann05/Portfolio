@@ -254,7 +254,7 @@ h2 {
     padding: 15px 30px;
     font-weight: 500;
     justify-self: flex-end;
-    cursor: pointer;
+    cursor: not-allowed;
     transition: 300ms ease;
 }
 
@@ -538,6 +538,7 @@ h1 {
     color: var(--text-orange);
     border: solid 1px var(--text-green);
     transition: 300ms ease;
+    cursor: pointer;
 }
 
 .can-submit:hover {
@@ -606,4 +607,31 @@ h1 {
 
 .align-right p {
     text-align: right;
+}
+
+.overlay-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.response-overlay {
+    align-self: center;
+    justify-self: center;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 2px var(--text-green);
+    background-color: #3118a9;
+    color: var(--text-green);
+}
+
+.close-overlay {
+    font-size: 32px;
+    height: 48px;
+    width: 48px;
+    border-radius: 16px;
+    border: none;
+    background-color: var(--text-green);
+    color: var(--text-orange);
+    font-weight: 900;
+    cursor: pointer;
 }

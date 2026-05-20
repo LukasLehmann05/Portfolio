@@ -26,9 +26,9 @@
                 </nav>
             </div>
             <div class="language-selector">
-                <p class="language-text current-language">DE</p>
+                <a class="language-text current-language" href="index.html">DE</a>
                 <p>|</p>
-                <p class="language-text">EN</p>
+                <a class="language-text" href="en/index_en.html">EN</a>
             </div>
         </div>
     </header>
@@ -344,6 +344,14 @@
             </section>
         </div>
     </footer>
+
+    <dialog id="response_overlay" class="response-overlay">
+        <div class="overlay-title">
+            <h2>Vielen Dank!</h2>
+            <button class="close-overlay" onclick="closeResponse()">X</button>
+        </div>
+        <p>Ihre Nachricht wurde versendet. Ich werde mich in Kürze bei ihnen melden.</p>
+    </dialog>
 
 </body>
 <script src="./js/contact.js"></script>

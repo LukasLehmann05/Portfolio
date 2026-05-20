@@ -1,16 +1,17 @@
-let name_input = document.getElementById("name_input");
-let email_input = document.getElementById("email_input");
-let message_input = document.getElementById("message_input");
-let submit_button = document.getElementById("submit_button");
+const name_input = document.getElementById("name_input");
+const email_input = document.getElementById("email_input");
+const message_input = document.getElementById("message_input");
+const submit_button = document.getElementById("submit_button");
 
-let guidlines_checkbox = document.getElementById("guidlines_checkbox");
+const guidlines_checkbox = document.getElementById("guidlines_checkbox");
+const responseOverlay = document.getElementById("response_overlay")
 
-let input_section_name = document.getElementById("input_section_name");
-let input_section_email = document.getElementById("input_section_email");
-let input_section_message = document.getElementById("input_section_message");
-let validate_text_name = document.getElementById("validate_text_name");
-let validate_text_email = document.getElementById("validate_text_email");
-let validate_text_message = document.getElementById("validate_text_message");
+const input_section_name = document.getElementById("input_section_name");
+const input_section_email = document.getElementById("input_section_email");
+const input_section_message = document.getElementById("input_section_message");
+const validate_text_name = document.getElementById("validate_text_name");
+const validate_text_email = document.getElementById("validate_text_email");
+const validate_text_message = document.getElementById("validate_text_message");
 
 let canSubmit = false
 
@@ -103,16 +104,23 @@ async function submit(name, email, message) {
             }
         });
 
-        const data = await response.json();
-        
-        if (data.success) {
-            console.log("Email sent successfully!");
-        } else {
-            console.error("Error:", data.error);
+        if (response.ok) {
+
         }
     } catch (error) {
         console.error("Fetch error:", error);
     }
+
+    await clearForm()
+}
+
+function clearForm() {
+    name_input.value = ""
+    email_input.value = ""
+    message_input.value = ""
+    acceptedGuidlines = false
+    toggleSubmitButton(false)
+    guidlines_checkbox.classList.remove("checked")
 }
 
 function checkForLegalRequirement() {
@@ -155,6 +163,14 @@ function removeWrongInput(id) {
 }
 
 function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return regex.test(email)
+}
+
+function displayResponse() {
+    responseOverlay.showModal()
+}
+
+function closeResponse() {
+    responseOverlay.close()
 }
