@@ -96,7 +96,7 @@ async function submit(name, email, message) {
             body: JSON.stringify({
                 name: name,
                 email: email,
-                userMessage: message
+                message: message
             }),
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
