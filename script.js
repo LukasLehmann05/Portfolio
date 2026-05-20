@@ -90,17 +90,29 @@ function RemoveInputAlert(id) {
 }
 
 async function submit(name, email, message) {
-    fetch("php/contact.php", {
-        method: "POST",
-        body: JSON.stringify({
-            name: name,
-            email: email,
-            userMessage: message
-        }),
-        headers: {
-            "Content-Type": "application/json; charset=utf-8"
+    try {
+        const response = await fetch("php/contact.php", {
+            method: "POST",
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                userMessage: message
+            }),
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            }
+        });
+
+        const data = await response.json();
+        
+        if (data.success) {
+            console.log("Email sent successfully!");
+        } else {
+            console.error("Error:", data.error);
         }
-    })
+    } catch (error) {
+        console.error("Fetch error:", error);
+    }
 }
 
 function checkForLegalRequirement() {

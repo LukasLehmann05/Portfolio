@@ -561,6 +561,7 @@ h1 {
     display: flex;
     gap: 8px;
     cursor: pointer;
+    margin-right: auto;
 }
 
 .legal-requirement a {

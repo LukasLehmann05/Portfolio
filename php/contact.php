@@ -6,7 +6,7 @@ header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json; charset=utf-8");
 
-$siteEmail = "lukaslehmann05@gmail.com";
+$siteEmail = "lukaslehmann05@protonmail.com";
 
 switch ($_SERVER['REQUEST_METHOD']) {
 
