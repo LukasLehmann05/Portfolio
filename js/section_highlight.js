@@ -1,5 +1,8 @@
 let allSections = document.querySelectorAll('[id*="highlight"]')
 
+/**
+ * This function checks the current view of the user and highlights the corresponding section in the navigation bar
+ */
 function checkCurrentScroll() {
     let scrollY = window.scrollY
 

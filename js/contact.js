@@ -21,6 +21,9 @@ let isMessageValid = false
 
 let acceptedGuidlines = false
 
+/**
+ * This function gets called when the user clicks the submit button, and checks for all requirements
+ */
 function submitContact() {
     if (checkForLegalRequirement()) {
         let name = name_input.value
@@ -31,12 +34,18 @@ function submitContact() {
     }
 }
 
+/**
+ * This function resets the validation state of all inputs
+ */
 function resetValidation() {
     isEmailValid = true
     isNameValid = true
     isMessageValid = true
 }
 
+/**
+ * This function checks if all fields are filled and if the content is valid
+ */
 function checkForRequired(name, email, message) {
     resetValidation()
     canSubmit = true
@@ -63,6 +72,9 @@ function checkForRequired(name, email, message) {
     }
 }
 
+/**
+ * This function displays user feedback if a input is wrong or missing
+ */
 function missingInput() {
     if (!isNameValid) {
         removeWrongInput("name")
@@ -83,6 +95,9 @@ function missingInput() {
     }
 }
 
+/**
+ * This function removes the input alert for a specific input field
+ */
 function RemoveInputAlert(id) {
     let alert_to_remove = document.getElementById("icon_" + id)
     if (alert_to_remove) {
@@ -90,6 +105,12 @@ function RemoveInputAlert(id) {
     }
 }
 
+/**
+ * This function handles the POST request to the server with the user input
+ * @param {string} name - The name of the user
+ * @param {string} email - The email of the user
+ * @param {string} message - The message of the user
+ */
 async function submit(name, email, message) {
     try {
         const response = await fetch("php/contact.php", {
@@ -114,6 +135,9 @@ async function submit(name, email, message) {
     await clearForm()
 }
 
+/**
+ * This function clears the form and resets all values to default
+ */
 function clearForm() {
     name_input.value = ""
     email_input.value = ""
@@ -123,6 +147,9 @@ function clearForm() {
     guidlines_checkbox.classList.remove("checked")
 }
 
+/**
+ * This function checks if the user has accepted the legal requirements
+ */
 function checkForLegalRequirement() {
     if (acceptedGuidlines) {
         toggleSubmitButton(true)
@@ -133,6 +160,10 @@ function checkForLegalRequirement() {
     }
 }
 
+/**
+ * This function toggles the submit button depending on the state of the guidlines checkbox
+ * @param {boolean} state - The state of the guidlines checkbox
+ */
 function toggleSubmitButton(state) {
     if (state) {
         submit_button.classList.add("can-submit")
@@ -141,6 +172,9 @@ function toggleSubmitButton(state) {
     }
 }
 
+/**
+ * This function toggles the state of the guidelines checkbox
+ */
 function toggleCheck() {
     if (guidlines_checkbox.classList.contains("checked")) {
         guidlines_checkbox.classList.remove("checked")
@@ -153,6 +187,10 @@ function toggleCheck() {
     }
 }
 
+/**
+ * This function removes the wrong input alert for a specific input field
+ * @param {string} id - The id of the input field to remove the alert from
+ */
 function removeWrongInput(id) {
     document.getElementById("icon_" + id)?.remove()
     document.getElementById("validate_text_" + id)?.classList.remove("invalid-input")
@@ -162,15 +200,26 @@ function removeWrongInput(id) {
     }
 }
 
+/**
+ * This function checks if the mail of the user is valid 
+ * @param {string} email - The email of the user
+ * @returns {boolean} - Returns true if the email is valid, false otherwise
+ */
 function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return regex.test(email)
 }
 
+/**
+ * Displays the response overlay
+ */
 function displayResponse() {
     responseOverlay.showModal()
 }
 
+/**
+ * Closes the response overlay
+ */
 function closeResponse() {
     responseOverlay.close()
 }
