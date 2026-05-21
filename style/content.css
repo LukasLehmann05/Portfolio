@@ -233,6 +233,7 @@ h2 {
 
 .contact-form .guidlines-checkbox {
     width: 18px;
+    min-width: 18px;
     height: 18px;
     border: solid 2px var(--text-orange);
     appearance: none;

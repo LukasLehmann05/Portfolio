@@ -19,3 +19,5 @@ function checkCurrentScroll() {
         }
     })
 }
+
+window.addEventListener('scroll', checkCurrentScroll)
