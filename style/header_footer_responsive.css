@@ -20,6 +20,10 @@
     .language-selector {
         display: none;
     }
+
+    .burger-menu {
+        display: block;
+    }
 }
 
 @media (max-width: 800px) {

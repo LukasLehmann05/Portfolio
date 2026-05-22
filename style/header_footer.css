@@ -138,3 +138,8 @@ header {
     color: var(--text-green);
     text-decoration: underline;
 }
+
+.burger-menu {
+    display: none;
+}
+

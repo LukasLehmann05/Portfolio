@@ -1,3 +1,8 @@
+const burgerClosed = "./img/icons/burger_closed.svg"
+const burgerOpen = "./img/icons/burger_open.svg"
+const burgerMenu = document.getElementById("burger_menu")
+
+
 /**
  * The init function gets called when the page loads
  */
@@ -14,4 +19,8 @@ function checkPreferedLanguage() {
     if (!userLang.startsWith("de")) {
         location.href = "en/index_en.html"
     }   
+}
+
+function toggleBurgerMenu() {
+
 }
