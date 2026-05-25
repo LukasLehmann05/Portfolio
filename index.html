@@ -16,7 +16,7 @@
 <body onload="init()">
     <header>
         <div class="header-content">
-            <div class="nav-bar">
+            <div class="nav-bar" id="nav_bar">
                 <p>&lt;LL&gt;</p>
                 <nav class="nav-links">
                     <a href="#about_section highlight" id="nav_about_section">Warum ich</a>
@@ -31,9 +31,7 @@
                 <a class="language-text" href="en/index_en.html">EN</a>
             </div>
             
-            <div class="burger-menu" onclick="toggleBurgerMenu()" id="burger_menu">
-                <img src="./img/icons/burger_closed.svg" alt="burger menu">
-            </div>
+            <img src="./img/icons/burger_closed.svg" alt="burger menu" class="burger-menu" onclick="toggleBurgerMenu()" id="burger_menu">
         </div>
     </header>
 

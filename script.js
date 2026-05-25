@@ -1,7 +1,12 @@
 const burgerClosed = "./img/icons/burger_closed.svg"
-const burgerOpen = "./img/icons/burger_open.svg"
+const burgerOpen = "./img/icons/burger_opened.svg"
 const burgerMenu = document.getElementById("burger_menu")
+const nav_bar = document.getElementById("nav_bar")
+const burgerIconAlignTop = "flex-start"
+const burgerIconAlignCenter = "center"
+const headerContent = document.querySelector(".header-content")
 
+let burgerMenuOpen = false
 
 /**
  * The init function gets called when the page loads
@@ -22,5 +27,8 @@ function checkPreferedLanguage() {
 }
 
 function toggleBurgerMenu() {
-
+    nav_bar.classList.toggle("show-burger-nav")
+    burgerMenuOpen = !burgerMenuOpen
+    burgerMenu.src = burgerMenuOpen ? burgerOpen : burgerClosed
+    headerContent.style.alignItems = burgerMenuOpen ? burgerIconAlignTop : burgerIconAlignCenter
 }
