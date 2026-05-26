@@ -31,7 +31,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #13074E, #1D0A79F2);
+    background: linear-gradient(0deg,rgb(11, 4, 44) 0%, rgb(43, 22, 148) 50%, rgb(11, 4, 44) 100%);
     color: var(--text-green);
     min-height: 100vh;
 }

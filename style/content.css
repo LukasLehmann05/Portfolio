@@ -133,11 +133,18 @@ h2 {
     gap: 10px;
 }
 
+.language-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
 .all-skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 32px;
     margin-top: 32px;
+    margin-bottom: 64px;
 }
 
 .skill-section {

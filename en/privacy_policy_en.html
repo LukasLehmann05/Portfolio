@@ -16,20 +16,23 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="nav-bar">
+            <div class="nav-bar" id="nav_bar">
                 <p>&lt;LL&gt;</p>
                 <nav class="nav-links">
-                    <a href="../en/index_en.html#about_section">About Me</a>
-                    <a href="../en/index_en.html#skill_section">Skills</a>
-                    <a href="../en/index_en.html#project_section">Projects</a>
-                    <a href="../en/index_en.html#contact_section">Contact</a>
+                    <a href="../en/index.html#about_section">About Me</a>
+                    <a href="../en/index.html#skill_section">Skills</a>
+                    <a href="../en/index.html#project_section">Projects</a>
+                    <a href="../en/index.html#contact_section">Contact</a>
                 </nav>
             </div>
             <div class="language-selector">
-                <a class="language-text" href="../index.html">DE</a>
+                <a class="language-text" href="../de/privacy_policy.html">DE</a>
                 <p>|</p>
                 <a class="language-text current-language" href="privacy_policy_en.html">EN</a>
             </div>
+
+            <img src="./img/icons/burger_closed.svg" alt="burger menu" class="burger-menu" onclick="toggleBurgerMenu()"
+                id="burger_menu">
         </div>
     </header>
 
@@ -70,7 +73,8 @@
             <h2>What is the purpose of collecting this data?</h2>
             <p>Data is used exclusively for the following purposes:</p>
             <ul>
-                <li>Processing and responding to inquiries via the contact form (Legal basis: Art. 6 Abs. 1 lit. b DSGVO).</li>
+                <li>Processing and responding to inquiries via the contact form (Legal basis: Art. 6 Abs. 1 lit. b
+                    DSGVO).</li>
                 <li>Providing a stable and secure portfolio (Legal basis: Art. 6 Abs. 1 lit. f DSGVO).
                 </li>
             </ul>
