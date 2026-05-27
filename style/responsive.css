@@ -39,6 +39,11 @@
         align-items: center;
     }
 
+    .project-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
     .project-details {
         display: flex;
         flex-direction: column;
@@ -123,7 +128,8 @@
     }
 
     .project-card img {
-        width: 95%;
+        width: 100%;
+        height: auto;
     }
 
     h1 {
@@ -171,5 +177,9 @@
 
     .project-links a {
         padding: 10px 20px;
+    }
+
+    .project-title {
+        font-size: 36px;
     }
 }
