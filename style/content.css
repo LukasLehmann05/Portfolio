@@ -145,7 +145,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 32px;
-    margin-top: 32px;
+    padding-top: 32px;
     margin-bottom: 64px;
 }
 
@@ -648,4 +648,38 @@ h1 {
     color: var(--text-orange);
     font-weight: 900;
     cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.project-card,
+.contact-section-title,
+.contact-info,
+.contact-form,
+.feedback-cards,
+.language-card,
+.language-subtext,
+.fade-init,
+.fade-long-init {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fade {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 1.5s ease both;
+}
+
+.fade-long {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 2.5s ease both;
 }
