@@ -22,6 +22,21 @@ let isMessageValid = false
 let acceptedGuidlines = false
 
 /**
+ * Appends a validation icon to the target input section without parsing HTML strings
+ * @param {HTMLElement} target - The input section container
+ * @param {string} id - The field id suffix used for icon id
+ * @param {boolean} isCorrect - Whether to show the correct or wrong icon
+ */
+function appendFeedbackIcon(target, id, isCorrect) {
+    const icon = document.createElement("img")
+    icon.src = isCorrect ? "./img/icons/correct.svg" : "./img/icons/attention.svg"
+    icon.className = "input-feedback"
+    icon.alt = isCorrect ? "correct input" : "wrong input"
+    icon.id = "icon_" + id
+    target.appendChild(icon)
+}
+
+/**
  * This function gets called when the user clicks the submit button, and checks for all requirements
  */
 function submitContact() {
@@ -66,7 +81,10 @@ function checkName(name) {
         isNameValid = false
         canSubmit = false
         missingName()
-    } 
+    } else {
+        removeWrongInput("name")
+        appendFeedbackIcon(input_section_name, "name", true)
+    }
 }
 
 /**
@@ -78,7 +96,10 @@ function checkEmail(email) {
         isEmailValid = false
         canSubmit = false
         missingEmail()
-    } 
+    } else {
+        removeWrongInput("email")
+        appendFeedbackIcon(input_section_email, "email", true)
+    }
 }
 
 /**
@@ -90,7 +111,10 @@ function checkMessage(message) {
         isMessageValid = false
         canSubmit = false
         missingMessage()
-    } 
+    } else {
+        removeWrongInput("message")
+        appendFeedbackIcon(input_section_message, "message", true)
+    }
 }
 
 /**
@@ -99,7 +123,7 @@ function checkMessage(message) {
 function missingName() {
     if (!isNameValid) {
         removeWrongInput("name")
-        input_section_name.innerHTML += returnWrongInputIcon("name")
+        appendFeedbackIcon(input_section_name, "name", false)
         validate_text_name.classList.add("invalid-input")
     }
 }
@@ -110,7 +134,7 @@ function missingName() {
 function missingEmail() {
     if (!isEmailValid) {
         removeWrongInput("email")
-        input_section_email.innerHTML += returnWrongInputIcon("email")
+        appendFeedbackIcon(input_section_email, "email", false)
         validate_text_email.classList.add("invalid-input")
         input_section_message.classList.add("invalid-input-height")
     }
@@ -122,7 +146,7 @@ function missingEmail() {
 function missingMessage() {
     if (!isMessageValid) {
         removeWrongInput("message")
-        input_section_message.innerHTML += returnWrongInputIcon("message")
+        appendFeedbackIcon(input_section_message, "message", false)
         validate_text_message.classList.add("invalid-input")
     }
 }
