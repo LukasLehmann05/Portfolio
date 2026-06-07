@@ -41,6 +41,7 @@ function resetValidation() {
     isEmailValid = true
     isNameValid = true
     isMessageValid = true
+    canSubmit = true
 }
 
 /**
@@ -48,60 +49,81 @@ function resetValidation() {
  */
 function checkForRequired(name, email, message) {
     resetValidation()
-    canSubmit = true
-    if (name.trim() == "") {
-        canSubmit = false
-        isNameValid = false
-    }
-
-    if (email.trim() == "" || !validateEmail(email)) {
-        canSubmit = false
-        isEmailValid = false
-    }
-
-    if (message.trim() == "") {
-        canSubmit = false
-        isMessageValid = false
-    }
-
-    if (!canSubmit) {
-        input_section_message.classList.add("invalid-input-height")
-        missingInput()
-    } else {
+    checkName(name)
+    checkEmail(email)
+    checkMessage(message)
+    if (canSubmit) {
         submit(name, email, message)
     }
 }
 
 /**
- * This function displays user feedback if a input is wrong or missing
+ * This function checks if the message is valid, and if not, it sets the validation state to false and displays the wrong input alert
+ * @param {string} message - The message of the user
  */
-function missingInput() {
+function checkName(name) {
+    if (!validateName(name)) {
+        isNameValid = false
+        canSubmit = false
+        missingName()
+    } 
+}
+
+/**
+ * This function checks if the email is valid, and if not, it sets the validation state to false and displays the wrong input alert
+ * @param {string} email - The email of the user
+ */
+function checkEmail(email) {
+    if (!validateEmail(email)) {
+        isEmailValid = false
+        canSubmit = false
+        missingEmail()
+    } 
+}
+
+/**
+ * This function checks if the message is valid, and if not, it sets the validation state to false and displays the wrong input alert
+ * @param {string} message - The message of the user
+ */
+function checkMessage(message) {
+    if (!validateMessage(message)) {
+        isMessageValid = false
+        canSubmit = false
+        missingMessage()
+    } 
+}
+
+/**
+ * This function displays the wrong input alert for the name input field
+ */
+function missingName() {
     if (!isNameValid) {
         removeWrongInput("name")
         input_section_name.innerHTML += returnWrongInputIcon("name")
         validate_text_name.classList.add("invalid-input")
     }
+}
 
+/**
+ * This function displays the wrong input alert for the email input field
+ */
+function missingEmail() {
     if (!isEmailValid) {
         removeWrongInput("email")
         input_section_email.innerHTML += returnWrongInputIcon("email")
         validate_text_email.classList.add("invalid-input")
-    }
-
-    if (!isMessageValid) {
-        removeWrongInput("message")
-        input_section_message.innerHTML += returnWrongInputIcon("message")
-        validate_text_message.classList.add("invalid-input")
+        input_section_message.classList.add("invalid-input-height")
     }
 }
 
 /**
- * This function removes the input alert for a specific input field
+ * This function displays the wrong input alert for the message input field
  */
-function RemoveInputAlert(id) {
-    let alert_to_remove = document.getElementById("icon_" + id)
-    if (alert_to_remove) {
-        alert_to_remove.remove()
+function missingMessage() {
+    if (!isMessageValid) {
+        removeWrongInput("message")
+        input_section_message.innerHTML += returnWrongInputIcon("message")
+        validate_text_message.classList.add("invalid-input")
     }
 }
 
@@ -195,7 +217,7 @@ function removeWrongInput(id) {
     document.getElementById("icon_" + id)?.remove()
     document.getElementById("validate_text_" + id)?.classList.remove("invalid-input")
 
-    if (id == "message") {
+    if (id == "email") {
         document.getElementById("input_section_message").classList.remove("invalid-input-height")
     }
 }
@@ -209,6 +231,25 @@ function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return regex.test(email)
 }
+
+/**
+ * This function checks if the name of the user is valid 
+ * @param {string} name - The name of the user
+ * @returns {boolean} - Returns true if the name is valid, false otherwise
+ */
+function validateName(name) {
+    return name.trim() !== "" && name.length >= 2
+}
+
+/**
+ * This function checks if the message of the user is valid 
+ * @param {string} message - The message of the user
+ * @returns {boolean} - Returns true if the message is valid, false otherwise
+ */
+function validateMessage(message) {
+    return message.trim() !== "" && message.length >= 5
+}
+
 
 /**
  * Displays the response overlay

@@ -279,15 +279,15 @@
                         <div class="form-input-left">
                             <div>
                                 <div class="input-container" id="input_section_name">
-                                    <input type="text" placeholder="Ihr Name" id="name_input" class="contact-input"
-                                        onclick="removeWrongInput('name')">
+                                    <input type="text" placeholder="Your Name" id="name_input" class="contact-input"
+                                        onclick="removeWrongInput('name')" onblur="checkName(name_input.value)">
                                 </div>
                                 <p id="validate_text_name">Please enter your name.</p>
                             </div>
                             <div>
                                 <div class="input-container" id="input_section_email">
-                                    <input type="email" placeholder="E-Mail" id="email_input" class="contact-input"
-                                        onclick="removeWrongInput('email')">
+                                    <input type="email" placeholder="Your Email" id="email_input" class="contact-input"
+                                        onclick="removeWrongInput('email')" onblur="checkEmail(email_input.value)">
                                 </div>
                                 <p id="validate_text_email">Please enter your email address.</p>
                             </div>
@@ -297,7 +297,7 @@
                             <div class="message-section-input input-container" id="input_section_message"
                                 onclick="removeWrongInput('message')">
                                 <textarea class="message-input" placeholder="Your Message"
-                                    id="message_input"></textarea>
+                                    id="message_input" onblur="checkMessage(message_input.value)"></textarea>
                             </div>
                             <p id="validate_text_message">Please enter your message.</p>
                         </div>

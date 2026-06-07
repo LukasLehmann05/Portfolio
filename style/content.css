@@ -212,6 +212,14 @@ h2 {
     color: var(--text-green);
 }
 
+.contact-form input:focus {
+    outline: none;
+}
+
+.contact-form input:-webkit-autofill {
+    -webkit-text-fill-color: var(--text-green);
+}
+
 .form-input-left {
     display: flex;
     flex-direction: column;
@@ -230,12 +238,16 @@ h2 {
     resize: none;
 }
 
+.message-input:focus {
+    outline: none;
+}
+
 .message-input::placeholder {
     color: var(--text-green);
 }
 
 .submit-section {
-    margin-top: 32px;
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
 }
@@ -654,6 +666,7 @@ h1 {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
