@@ -696,3 +696,10 @@ h1 {
     visibility: visible;
     animation: fadeIn 2.5s ease both;
 }
+
+.input-container input:-webkit-autofill,
+.input-container input:-webkit-autofill:hover,
+.input-container input:-webkit-autofill:focus,
+.input-container input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
