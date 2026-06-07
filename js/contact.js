@@ -29,7 +29,7 @@ let acceptedGuidlines = false
  */
 function appendFeedbackIcon(target, id, isCorrect) {
     const icon = document.createElement("img")
-    icon.src = isCorrect ? "./img/icons/correct.svg" : "./img/icons/attention.svg"
+    icon.src = isCorrect ? "../img/icons/correct.svg" : "../img/icons/attention.svg"
     icon.className = "input-feedback"
     icon.alt = isCorrect ? "correct input" : "wrong input"
     icon.id = "icon_" + id
