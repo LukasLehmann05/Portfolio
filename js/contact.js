@@ -191,6 +191,10 @@ function clearForm() {
     acceptedGuidlines = false
     toggleSubmitButton(false)
     guidlines_checkbox.classList.remove("checked")
+    resetValidation()
+    removeWrongInput("name")
+    removeWrongInput("email")
+    removeWrongInput("message")
 }
 
 /**
