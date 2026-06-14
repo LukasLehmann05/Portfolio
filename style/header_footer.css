@@ -51,6 +51,17 @@ header {
     font-family: "Handjet", sans-serif;
 }
 
+.nav-bar p a {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+.nav-bar p a:hover {
+    color: var(--text-green);
+}
+
 .nav-links {
     display: flex;
     justify-content: flex-start;
@@ -83,6 +94,16 @@ header {
     font-size: 54px;
     font-weight: 400;
     letter-spacing: 5%;
+}
+
+.abbreviation a {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.abbreviation a:hover {
+    color: var(--text-green);
 }
 
 .abbreviation-subtext {

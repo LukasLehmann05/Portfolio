@@ -17,7 +17,7 @@
     <header>
         <div class="header-content">
             <div class="nav-bar" id="nav_bar">
-                <p>&lt;LL&gt;</p>
+                <p><a href="./index.html">&lt;LL&gt;</a></p>
                 <nav class="nav-links">
                     <a href="#about_section highlight" id="nav_about_section">About me</a>
                     <a href="#skill_section highlight" id="nav_skill_section">Skills</a>
@@ -177,8 +177,8 @@
                                 creating subtasks.
                             </p>
                             <div class="project-links">
-                                <a href="https://github.com/LukasLehmann05/Join" class="github-button">Github</a>
-                                <a href="https://join.lukas-lehmann.eu/" class="live-test-button">Live Test</a>
+                                <a href="https://github.com/LukasLehmann05/Join" class="github-button" target="_blank">Github</a>
+                                <a href="https://join.lukas-lehmann.eu/" class="live-test-button" target="_blank">Live Test</a>
                             </div>
                         </div>
                     </section>
@@ -193,9 +193,8 @@
                                 includes collectible items
                                 and an interactive menu.</p>
                             <div class="project-links">
-                                <a href="https://github.com/LukasLehmann05/El-Pollo-Loco"
-                                    class="github-button">Github</a>
-                                <a href="https://pollo-loco.lukas-lehmann.eu/" class="live-test-button">Live Test</a>
+                                <a href="https://github.com/LukasLehmann05/El-Pollo-Loco" class="github-button" target="_blank">Github</a>
+                                <a href="https://pollo-loco.lukas-lehmann.eu/" class="live-test-button" target="_blank">Live Test</a>
                             </div>
                         </div>
                     </section>
@@ -296,16 +295,16 @@
                         <div class="message-section" id="message_section">
                             <div class="message-section-input input-container" id="input_section_message"
                                 onclick="removeWrongInput('message')">
-                                <textarea class="message-input" placeholder="Your Message"
-                                    id="message_input" onblur="checkMessage(message_input.value)"></textarea>
+                                <textarea class="message-input" placeholder="Your Message" id="message_input"
+                                    onblur="checkMessage(message_input.value)"></textarea>
                             </div>
                             <p id="validate_text_message">Please enter your message.</p>
                         </div>
                     </div>
 
                     <div class="submit-section">
-                        <div class="legal-requirement" onclick="toggleCheck()">
-                            <div class="guidlines-checkbox" id="guidlines_checkbox">
+                        <div class="legal-requirement">
+                            <div class="guidlines-checkbox" id="guidlines_checkbox" onclick="toggleCheck()">
                                 <p>&#x2714;</p>
                             </div>
                             <label for="guidlines_checkbox">I have read the <a href="./en/privacy_policy.html">Privacy
@@ -326,28 +325,28 @@
         <div class="footer-content">
             <section class="footer-info">
                 <div class="abbreviation-section">
-                    <p class="abbreviation">&lt;LL&gt;</p>
+                    <p class="abbreviation"><a href="./index.html">&lt;LL&gt;</a></p>
                     <p class="abbreviation-subtext">frontend developer</p>
                 </div>
                 <p class="copyright-text">
                     © Lukas Lehmann 2026
                 </p>
                 <div class="footer-links">
-                    <a href="https://github.com/LukasLehmann05">
+                    <a href="https://github.com/LukasLehmann05" target="_blank">
                         <img src="../img/icons/icon_github.svg" alt="github" class="hover-green">
                     </a>
-                    <a href="mailto:lukaslehmann05@protonmail.com">
+                    <a href="mailto:lukaslehmann05@protonmail.com" target="_blank">
                         <img src="../img/icons/icon_mail_round.svg" alt="mail" class="hover-green">
                     </a>
-                    <a href="https://www.linkedin.com/in/lukas-lehmann-b7b5683bb/">
+                    <a href="https://www.linkedin.com/in/lukas-lehmann-b7b5683bb/" target="_blank">
                         <img src="../img/icons/icon_linkedin.svg" alt="linkedin" class="hover-green">
                     </a>
                 </div>
             </section>
 
             <section class="legal-links">
-                <a href="./en/legal_notice_en.html">Legal Notice</a>
-                <a href="./en/privacy_policy_en.html">Privacy Policy</a>
+                <a href="./legal_notice_en.html">Legal Notice</a>
+                <a href="./privacy_policy_en.html">Privacy Policy</a>
             </section>
         </div>
     </footer>
@@ -355,7 +354,6 @@
     <dialog id="response_overlay" class="response-overlay">
         <div class="overlay-title">
             <h2>Thank you!</h2>
-            <button class="close-overlay" onclick="closeResponse()">X</button>
         </div>
         <p>Your message has been sent. I will get back to you shortly.</p>
     </dialog>
@@ -365,6 +363,7 @@
 <script src="../js/template.js"></script>
 <script src="../js/section_highlight.js"></script>
 <script src="../js/observer_handler.js"></script>
+<script src="../js/responsive_text_handler.js"></script>
 <script src="../script.js"></script>
 
 </html>

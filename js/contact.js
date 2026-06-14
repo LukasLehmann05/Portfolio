@@ -256,7 +256,7 @@ function removeWrongInput(id) {
  * @returns {boolean} - Returns true if the email is valid, false otherwise
  */
 function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const regex = /^[^\s@]+@[^.\s@]+\.[^.\s@]+$/
     return regex.test(email)
 }
 
@@ -284,6 +284,9 @@ function validateMessage(message) {
  */
 function displayResponse() {
     responseOverlay.showModal()
+    setTimeout(() => {
+        responseOverlay.close()
+    }, 4000)
 }
 
 /**
