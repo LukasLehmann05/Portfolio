@@ -1,11 +1,15 @@
 const burgerClosed = "../img/icons/burger_closed.svg"
 const burgerOpen = "../img/icons/burger_opened.svg"
 const burgerMenu = document.getElementById("burger_menu")
-const nav_bar = document.getElementById("nav_bar")
+const header = document.getElementById("header")
 const headerContent = document.querySelector(".header-content")
 const locationText = document.getElementById("location")
 const relocateText = document.getElementById("relocate")
 const remoteText = document.getElementById("remote")
+
+const headerBurgerBackground = "linear-gradient(#13074E, #1D0A79F2 95%)";
+const headerBackground = "linear-gradient(rgb(11 4 45) 60%, rgb(11 4 45 / 0.5))"
+
 
 let burgerMenuOpen = false
 let isResponsive = false
@@ -24,7 +28,7 @@ function checkPreferedLanguage() {
     let userLang = navigator.language
 
     if (!userLang.startsWith("de")) {
-        location.href = "en/index_en.html"
+        location.href = "en/index.html"
     }
 }
 
@@ -32,14 +36,14 @@ function checkPreferedLanguage() {
  * This function toggles the burger menu
  */
 function toggleBurgerMenu() {
-    nav_bar.classList.toggle("show-burger-nav")
-    burgerMenuOpen = !burgerMenuOpen
-    burgerMenu.src = burgerMenuOpen ? burgerOpen : burgerClosed
-    headerContent.style.alignItems = burgerMenuOpen ? "flex-start" : "center"
-    document.querySelector('header').style.position = burgerMenuOpen ? checkIfScrolled() : "sticky"
-    document.querySelector('main').style.marginTop = burgerMenuOpen ? checkForMargin() : "0px"
-    document.querySelector('#burger_menu').style.paddingTop = burgerMenuOpen ? "11px" : "0px"
-    
+    if (window.innerWidth <= 950 || burgerMenuOpen) {
+        header.classList.toggle("show-burger-nav")
+        burgerMenuOpen = !burgerMenuOpen
+        burgerMenu.src = burgerMenuOpen ? burgerOpen : burgerClosed
+        document.querySelector('header').style.position = burgerMenuOpen ? checkIfScrolled() : "sticky"
+        document.querySelector('main').style.marginTop = burgerMenuOpen ? checkForMargin() : "0px"
+        document.querySelector('#burger_menu').style.paddingTop = burgerMenuOpen ? "11px" : "0px"
+    }
 }
 
 /**
@@ -65,3 +69,11 @@ function checkForMargin() {
         return "0px"
     }
 }
+
+function checkForBurgerClose() {
+    if (window.innerWidth > 950 && burgerMenuOpen) {
+        toggleBurgerMenu()
+    }
+}
+
+window.addEventListener("resize", checkForBurgerClose)

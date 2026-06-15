@@ -79,6 +79,10 @@
     .hide-1100 {
         display: none;
     }
+
+    h2 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 1000px) {

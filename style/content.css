@@ -357,7 +357,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     gap: 42px;
-    padding-top: 104px;
+    padding-top: 132px;
 }
 
 .about-section img {
@@ -376,10 +376,8 @@ h1 {
 }
 
 .about-title {
-    font-size: 54px;
     line-height: 120%;
     letter-spacing: 0%;
-    font-weight: 500;
     margin-bottom: 24px;
 }
 
