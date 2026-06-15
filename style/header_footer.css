@@ -1,6 +1,8 @@
 header {
     position: sticky;
     top: 0;
+    left: 0;
+    right: 0;
     padding: 24px 0px;
     background: linear-gradient(rgb(11 4 45) 60%, rgb(11 4 45 / 0.5));
     color: var(--text-orange);
