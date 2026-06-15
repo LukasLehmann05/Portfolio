@@ -158,6 +158,10 @@ header {
     color: var(--text-green);
 }
 
+.show-burger-nav .header-content .language-selector-burger .current-language {
+    color: var(--text-green);
+}
+
 .hover-green:hover {
     filter: brightness(0) saturate(100%) invert(77%) sepia(62%) saturate(2744%) hue-rotate(113deg) brightness(101%) contrast(98%);
 }
