@@ -58,12 +58,20 @@ function checkIfScrolled() {
     }
 }
 
+function stickyBurger() {
+    if (window.scrollY >= 50 && burgerMenuOpen) {
+        document.querySelector('header').style.position = "sticky"
+    } else {
+        document.querySelector('header').style.position = burgerMenuOpen ? "absolute" : "sticky"
+    }
+}
+
 /**
  * This function checks how much was scrolled so that the style can be changed accordingly.
  * @returns {string} The margin-top value for the main content
  */
 function checkForMargin() {
-    if (window.scrollY <= 50) {
+    if (window.scrollY < 50) {
         return "101px"
     } else {
         return "0px"
@@ -77,3 +85,4 @@ function checkForBurgerClose() {
 }
 
 window.addEventListener("resize", checkForBurgerClose)
+window.addEventListener("scroll", stickyBurger)
