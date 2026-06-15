@@ -94,6 +94,7 @@
     .feedback-cards {
         justify-content: flex-start;
         scrollbar-width: thin;
+        padding-bottom: 8px;
     }
 }
 
