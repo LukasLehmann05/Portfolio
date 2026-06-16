@@ -1,5 +1,5 @@
 .hero-section {
-    min-height: calc(100vh - 101px);
+    min-height: calc(100dvh - 101px);
     display: flex;
     align-items: flex-end;
     position: relative;

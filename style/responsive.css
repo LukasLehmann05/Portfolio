@@ -211,10 +211,6 @@
         animation: 0.5s fadeIn ease both;
     }
 
-    .challenge-card p {
-        display: block;
-    }
-
     .project-title {
         text-align: center;
     }
@@ -249,6 +245,14 @@
     }
 
     .hide-mobile {
+        display: none;
+    }
+
+    .colleague-feedback {
+        text-align: center;
+    }
+
+    .challenge-card:hover p {
         display: none;
     }
 
