@@ -23,7 +23,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 105px;
+    padding-top: 132px;
 }
 
 .project-card {
@@ -150,11 +150,11 @@ h2 {
 }
 
 .skill-section {
-    padding-top: 103px;
+    padding-top: 132px;
 }
 
 .contact-section {
-    padding-top: 104px;
+    padding-top: 132px;
 }
 
 .contact-section-title {
@@ -324,7 +324,7 @@ h1 {
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    padding-bottom: 78px;
+    padding-bottom: 28px;
 }
 
 .scroll-down:hover {
@@ -634,6 +634,10 @@ h1 {
     text-align: right;
 }
 
+.language-subtext {
+    display: none;
+}
+
 .overlay-title {
     display: flex;
     justify-content: space-between;
@@ -659,6 +663,64 @@ h1 {
     color: var(--text-orange);
     font-weight: 900;
     cursor: pointer;
+}
+
+.challenge-card:hover p {
+    display: flex;
+}
+
+.all-skills:has(.challenge-card:hover)+.language-subtext {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: 0.5s fadeIn ease both;
+}
+
+.challenge-card:hover .challenge-arrow {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: 0.5s fadeIn ease both;
+}
+
+.challenge-arrow {
+    display: none;
+    margin-top: 28px;
+}
+
+.about-details .about-mobile-arrow {
+    display: none;
+    width: auto;
+    height: 50px;
+}
+
+.align-arrow-left {
+    align-self: flex-start;
+    margin-left: 5%;
+}
+
+.align-arrow-right {
+    align-self: flex-end;
+    margin-right: 5%;
+}
+
+.display-mobile {
+    display: none;
+}
+
+.hide-mobile {
+    display: block;
+}
+
+.colleague-feedback p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.feedback-arrow {
+    align-self: flex-start;
+    height: 100px;
+    width: auto;
 }
 
 @keyframes fadeIn {

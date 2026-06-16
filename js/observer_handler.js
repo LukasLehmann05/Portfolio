@@ -16,25 +16,21 @@ const observerSkills = new IntersectionObserver(handleIntersectLongAnim, options
 function handleIntersect(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.remove("fade-init")
-            entry.target.classList.add("fade")
-        } else {
-            entry.target.classList.remove("fade")
-            entry.target.classList.add("fade-init")
+            entry.target.classList.remove("fade-init");
+            entry.target.classList.add("fade");
+            observer.unobserve(entry.target); // stop observing after first reveal
         }
-    })
+    });
 }
 
 function handleIntersectLongAnim(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.remove("fade-long-init")
-            entry.target.classList.add("fade-long")
-        } else {
-            entry.target.classList.remove("fade-long")
-            entry.target.classList.add("fade-long-init")
+            entry.target.classList.remove("fade-long-init");
+            entry.target.classList.add("fade-long");
+            observer.unobserve(entry.target); // stop observing after first reveal
         }
-    })
+    });
 }
 
 function observeAll(selector, activeObserver, initialClass) {

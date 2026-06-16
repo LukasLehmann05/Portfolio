@@ -1,6 +1,7 @@
-@media (min-width: 1401px) {
+@media (min-width: 1440px) {
     .hero-content {
         flex-direction: column;
+        padding-bottom: 0px;
     }
 
     .hero-section-image {
@@ -114,9 +115,7 @@
     h2 {
         text-align: center;
     }
-}
 
-@media (max-width: 1000px) {
     .feedback-card {
         border: solid 1px var(--text-green);
         padding: 10px;
@@ -130,6 +129,10 @@
         justify-content: flex-start;
         scrollbar-width: thin;
         padding-bottom: 8px;
+    }
+
+    .feedback-arrow {
+        display: none;
     }
 }
 
@@ -189,6 +192,64 @@
     }
 }
 
+@media (max-width: 650px) {
+    .language-card p {
+        display: none;
+    }
+
+    .all-skills {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .language-subtext {
+        display: block;
+        animation: 0.5s fadeIn ease both;
+    }
+
+    .challenge-arrow {
+        display: block;
+        animation: 0.5s fadeIn ease both;
+    }
+
+    .challenge-card p {
+        display: block;
+    }
+
+    .project-title {
+        text-align: center;
+    }
+
+    .project-card p {
+        text-align: center;
+    }
+
+    .project-links {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .align-right {
+        align-items: center;
+    }
+
+    .about-details .about-mobile-arrow {
+        display: block;
+        animation: 0.5s fadeIn ease both;
+        width: auto;
+        height: 50px;
+    }
+
+    .display-mobile {
+        display: block;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+}
+
 @media (max-width: 600px) {
     h2 {
         font-size: 36px;
@@ -243,6 +304,11 @@
 
     .project-title {
         font-size: 36px;
+    }
+
+    .feedback-card {
+        min-width: 200px;
+        padding: 8px;
     }
 }
 
